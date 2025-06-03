@@ -12,7 +12,9 @@ export default function Home() {
             try {
                 new URL(url);
                 setIframeUrl(
-                    `/api/archive?url=${encodeURIComponent(url)}`
+                    `http://localhost:8888/api/v1/scraping?url=${encodeURIComponent(
+                        url
+                    )}`
                 );
             } catch (error) {
                 console.error(error);
